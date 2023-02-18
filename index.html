@@ -7,8 +7,21 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
+      <style>
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(152 201 204);
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: #b6e6e9;
+}
+</style>
   <body>
-    <div id="unity-container" class="unity-desktop">
+    <div id="unity-container" class="unity-desktop" style="position: absolute; width: 100%; height: 100%">
       <canvas id="unity-canvas" width=1920 height=1080></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -95,8 +108,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1920px";
-        canvas.style.height = "1080px";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
       }
 
       loadingBar.style.display = "block";
